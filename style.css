@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&family=Zen+Kurenaido&display=swap');
+
+/* Variables for this website */
+:root {
+    --primary: #000043;
+    --light: #ffffff;
+    --dark: #13125c;
+    --muted: #9fa0ca;
+    --shadow-dark: 0 0.1rem 0.2rem 0.1rem #36302933;
+    --shadow-light: 0 0.1rem 0.2rem 0.1rem #ffffff80;
+
+    --font-normal: "Zen Kaku Gothic New", Arial, sans-serif;
+    --font-heading: "Zen Kurenaido", Arial, sans-serif;
+
+    --space-0: 0; /* 0px */
+    --space-1: 0.5rem; /* 8px */
+    --space-2: 1rem; /* 16px */
+    --space-3: 2rem; /* 32px */
+
+}
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-normal);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+/************** BUTTONS **************/
+.btn {
+    border: none;
+    border-radius: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-secondary {
+    background-color: var(--muted);
+    color: var(--dark);
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/************** COLOURS **************/
+.bg-primary { background-color: var(--primary); }
+.bg-light { background-color: var(--light); }
+.bg-dark { background-color: var(--dark); }
+.bg-muted { background-color: var(--muted); }
+
+.text-primary { color: var(--primary); }
+.text-light { color: var(--light); }
+.text-dark { color: var(--dark); }
+.text-muted { color: var(--muted); }
+
+.shadow-dark { box-shadow: var(--shadow-dark); }
+.shadow-light { box-shadow: var(--shadow-light); }
+
+/************** LAYOUT **************/
+.container {
+    max-width: 1280px;
+    margin: var(--space-2) auto var(--space-0);
+}
+
+.d-flex { display: flex; }
+
+.flex-between{ justify-content: space-between; }
+
+.grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*repeats 1fr twice*/
+}
+
+.grid-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*repeats 1fr three times*/
+}
+
+/************** SPACING **************/
+.m-0 { margin: var(--space-0); }
+.m-1 { margin: var(--space-1); }
+.m-2 { margin: var(--space-2); }
+.m-3 { margin: var(--space-3); }
+
+.p-0 { padding: var(--space-0); }
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+
+.gap-0 { gap: var(--space-0); }
+.gap-1 { gap: var(--space-1); }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+
+/************** SWATCHES **************/
+.swatches {
+    display: flex; /* organizes children elements in a line */
+    
+}
+
+.swatch .swatch-value {
+    aspect-ratio: 1 / 1;
+    width: 4rem; /* em - root font size (16px) */
+    border-radius: 100%;
+    box-shadow: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
+}
+
+.swatch .swatch-name {
+    text-align: center;
+}
