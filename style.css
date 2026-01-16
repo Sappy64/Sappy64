@@ -147,3 +147,68 @@ h1, h2, h3, h4, h5, h6 {
 .li-style {
     list-style: none;
 }
+
+/************** BANNER **************/
+body {
+	display: grid;
+	grid-template-rows: 20px auto;
+	grid-template-columns: auto;
+	grid-template-areas: "banner" "body";
+	margin: 0;
+}
+header {
+	grid-area: banner;
+	background-color: var(--primary);
+	display: grid;		
+	grid-template-rows: 100%;
+	grid-template-columns: 1fr 2fr; 
+	grid-template-areas: "MCAST Logo";
+}
+
+/************** CONCTACT FORM  **************/
+
+h1 {
+    background-color: var(--primary); 
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--light);
+    font-weight: bolder;
+    text-align: center;
+}
+.contact-form {
+    background-color: var(--primary); 
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--light);
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    color: var(--muted);              
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    padding: 10px;             
+    width: 800px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #b6b0be;
+
+}
+
+.main-hero-area {
+    margin-top: 40px;          
+}

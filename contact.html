@@ -7,9 +7,56 @@
     <title>Contact Us</title>
 </head>
 <body>
-    <nav>
-        <a href="index.html"><h1>MCAST</h1></a>
-    </nav>
-    <h2>Contact Us</h2>
-</body>
-</html>
+    <main>
+        <section id="Banner" class="banner d-flex bg-dark">
+            <nav>
+                <a href="index.html">         
+                    <img src="Assets/Primary-White-2.png" alt="MCAST Logo" width= auto height= auto> 
+                </a>
+            </nav> 
+        </section>
+    </main>
+
+    <!-- Contact form-->
+    <section>
+        <div class="main-hero-area">
+            <main class="content-wrapper">
+                <section class="about-header">
+                    <h1>Contact Us</h1>
+                    
+                    <form action="mailto:info@mcast.edu.mt" method="post" enctype="text/plain" class="contact-form">
+                        <div class="form-group">
+                            <label for="input-topic">Position:</label>
+                            <select name="Position" id="input-topic" required>
+                                <option value="" disabled selected>Choose an option</option>
+                                <option value="Student">Student</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Parent">Parent</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-name">Full Name:</label>
+                            <input type="text" name="name" id="input-name" placeholder="John Smith">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-email">Email:</label>
+                            <input type="email" name="email" id="input-email" placeholder="name.lastname@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="input-message">Message:</label>
+                            <input type="text" id="input-message" placeholder="Your message here">
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </section>
+    </body>
+    </html>
