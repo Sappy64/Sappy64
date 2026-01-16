@@ -111,6 +111,11 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(3, 1fr); /*repeats 1fr three times*/
 }
 
+.grid-4col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*repeats 1fr four times*/
+}
+
 /************** SPACING **************/
 .m-0 { margin: var(--space-0); }
 .m-1 { margin: var(--space-1); }
@@ -149,21 +154,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /************** BANNER **************/
-body {
-	display: grid;
-	grid-template-rows: 20px auto;
-	grid-template-columns: auto;
-	grid-template-areas: "banner" "body";
-	margin: 0;
+.banner-sticky {
+    position: sticky;
+    top: auto;
+    background-color: var(--primary)
 }
-header {
-	grid-area: banner;
-	background-color: var(--primary);
-	display: grid;		
-	grid-template-rows: 100%;
-	grid-template-columns: 1fr 2fr; 
-	grid-template-areas: "MCAST Logo";
+
+/************** FAQ **************/
+.faq-list {
+    background-color: var(--primary);
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--light);
+    font-weight: bolder;
+    text-align: center;
 }
+
+.faq-border {
+    background-color: var(--light);
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--primary);
+    font-weight: bolder;
+    text-align: center;
+    list-style: none;
+}
+
+.faq-question {
+    text-emphasis: bold;
+}
+
+.faq-answer {
+    text-emphasis: light;
+    color: var(--muted);
+}
+
+
 
 /************** CONCTACT FORM  **************/
 
@@ -180,6 +216,7 @@ h1 {
     font-weight: bolder;
     text-align: center;
 }
+
 .contact-form {
     background-color: var(--primary); 
     padding: 40px;
@@ -191,6 +228,7 @@ h1 {
     gap: 20px;
     color: var(--light);
 }
+
 .form-group {
     display: flex;
     flex-direction: column;
